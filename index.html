@@ -20,11 +20,10 @@ body{
   letter-spacing: 5px;
 }
 .button{
- display: none;
+  display: inline-block;
 }
-.button:hover{
-    display: inline-block;
-}
+
+
 .days, .hours, .minutes, .seconds {
   display: inline-block;
   padding: 20px;
@@ -104,7 +103,9 @@ body{
       </div>
     
 </div>
-    //<button class="button">Mode Change</button>
+
+    <button id="button" class="button">light mode</button>
+    <button id="button1" class="button">dark mode</button>
 </body>
 <script>
     const year = new Date().getFullYear();
@@ -135,5 +136,16 @@ let timer = setInterval(function() {
 
 
 }, 1);
+
+var button = document.getElementById("button"); 
+button.addEventListener("click", function() 
+{ 
+  document.body.style.backgroundColor = "white";
+   });
+var button1 = document.getElementById("button1"); 
+button1.addEventListener("click", function() 
+{ 
+  document.body.style.backgroundColor = "#191919";
+   });
 </script>
 </html>
