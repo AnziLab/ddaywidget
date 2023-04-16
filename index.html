@@ -92,9 +92,9 @@ body{
     
 <div id="timer">
 
-    <div class="days"> 
+    <div id = "daydiv" class="days"> 
         <div id="days" class="numbers "> </div>days</div> 
-      <div class="hours"> 
+      <div  id = "hourdiv"class="hours"> 
         <div  id="hours" class="numbers"> </div>hours</div> 
       <div class="minutes"> 
         <div  id="minutes" class="numbers"> </div>minutes</div> 
@@ -104,8 +104,6 @@ body{
     
 </div>
 
-    <button id="button" class="button">light mode</button>
-    <button id="button1" class="button">dark mode</button>
 </body>
 <script>
     const year = new Date().getFullYear();
@@ -137,12 +135,12 @@ let timer = setInterval(function() {
 
 }, 1);
 
-var button = document.getElementById("button"); 
+var button = document.getElementById("daydiv"); 
 button.addEventListener("click", function() 
 { 
   document.body.style.backgroundColor = "white";
    });
-var button1 = document.getElementById("button1"); 
+var button1 = document.getElementById("hourdiv"); 
 button1.addEventListener("click", function() 
 { 
   document.body.style.backgroundColor = "#191919";
